@@ -1,0 +1,27 @@
+{
+    "name": "{BundleComposerName}",
+    "type": "contao-bundle",
+    "license": "{License}",
+    "authors": [
+        {
+            "name": "{AuthorName}",
+            "email": "{AuthorEmail}"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "{BundleNamespaceWithTwoSlashes}": "src/"
+        },
+        "classmap": [
+            "src/Resources/contao/"
+        ],
+        "exclude-from-classmap": [
+            "src/Resources/contao/config/",
+            "src/Resources/contao/dca/",
+            "src/Resources/contao/languages/"
+        ]
+    },
+    "extra": {
+        "contao-manager-plugin": "{BundleNamespaceWithTwoSlashes}ContaoManager\\Plugin"
+    }
+}
