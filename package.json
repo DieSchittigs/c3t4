@@ -1,0 +1,24 @@
+{
+  "name": "@dieschittigs/c3t4",
+  "version": "1.0.0",
+  "description": "Converts Contao 3.5 Modules to Contao 4.4 Bundles",
+  "main": "index.js",
+  "repository": "git@github.com:padarom/c3t4.git",
+  "author": "Christopher Mühl <christopher@dieschittigs.de>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "prepublish": "babel src -d lib"
+  },
+  "bin": {
+    "c3t4": "lib/c3t4.js"
+  },
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "inquirer": "^5.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
+  }
+}
