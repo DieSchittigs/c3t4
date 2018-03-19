@@ -1,7 +1,6 @@
 {
     "name": "{BundleComposerName}",
     "type": "contao-bundle",
-    "license": "{License}",
     "authors": [
         {
             "name": "{AuthorName}",

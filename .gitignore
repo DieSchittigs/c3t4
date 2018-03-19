@@ -1,8 +1,6 @@
-/vendor
+/node_modules
 /.idea
 /.vscode
 /.vagrant
 
-builds
 bundles
-
