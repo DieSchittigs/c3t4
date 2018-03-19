@@ -10,7 +10,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "{BundleNamespaceWithTwoSlashes}": "src/"
+            "{BundleNamespaceWithTwoSlashes}\\": "src/"
         },
         "classmap": [
             "src/Resources/contao/"
@@ -22,6 +22,6 @@
         ]
     },
     "extra": {
-        "contao-manager-plugin": "{BundleNamespaceWithTwoSlashes}ContaoManager\\Plugin"
+        "contao-manager-plugin": "{BundleNamespaceWithTwoSlashes}\\ContaoManager\\Plugin"
     }
 }
