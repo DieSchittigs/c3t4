@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2bb9ae42e35bc562db86f418ba363a69",
+    "content-hash": "514b9b092af759486920ed8bc0937e0a",
     "packages": [
         {
             "name": "beberlei/assert",
@@ -60,6 +60,48 @@
                 "validation"
             ],
             "time": "2018-03-16T17:46:00+00:00"
+        },
+        {
+            "name": "czproject/git-php",
+            "version": "v3.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/czproject/git-php.git",
+                "reference": "e40d2732fb6390e82a78a2804649eaf5f70f9fa1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/czproject/git-php/zipball/e40d2732fb6390e82a78a2804649eaf5f70f9fa1",
+                "reference": "e40d2732fb6390e82a78a2804649eaf5f70f9fa1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "nette/tester": "~1.1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Jan Pecha",
+                    "email": "janpecha@email.cz"
+                }
+            ],
+            "description": "Library for work with Git repository in PHP.",
+            "keywords": [
+                "git"
+            ],
+            "time": "2018-03-07T17:46:10+00:00"
         },
         {
             "name": "doctrine/inflector",
@@ -1297,6 +1339,32 @@
                 "wrapper"
             ],
             "time": "2018-02-26T11:59:57+00:00"
+        },
+        {
+            "name": "padarom/laravel-zero-interactive-mode",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "../laravel-zero-interactive-mode",
+                "reference": "840760dc7c38472da0d48c9d0ed18af152387e14",
+                "shasum": null
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Padarom\\LaravelZero\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Christopher Mühl",
+                    "email": "christopher@padarom.io"
+                }
+            ],
+            "description": "Service Provider for Laravel Zero that adds interactive functionality to console applications"
         },
         {
             "name": "php-school/cli-menu",
@@ -3347,7 +3415,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "padarom/laravel-zero-interactive-mode": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

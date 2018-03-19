@@ -2,14 +2,16 @@
 
 namespace DieSchittigs\C3t4\Commands;
 
-use Illuminate\Console\Scheduling\Schedule;
 use LaravelZero\Framework\Commands\Command;
+use Padarom\LaravelZero\SupportsInteractiveMode;
 use DieSchittigs\C3t4\Replacements;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 
 class ConvertCommand extends Command
 {
+    use SupportsInteractiveMode;
+
     /**
      * The signature of the command.
      *
@@ -43,7 +45,24 @@ class ConvertCommand extends Command
         $this->replacements->BundleName = 'BundlePluginInterface';
         $this->replacements->BundleAlias = 'MyBundle';
 
+        $gitAuthor = $this->getGitAuthor();
+
+        $this->replacements->AuthorName  = $this->prompt('Author Name', $gitAuthor['name']);
+        $this->replacements->AuthorEmail = $this->prompt('Author Email', $gitAuthor['email']);
+        
         $this->copyFixtures();
+    }
+
+    protected function getGitAuthor()
+    {
+        $name = $email = null;
+        exec('git config --global user.name', $name);
+        exec('git config --global user.email', $email);
+
+        $name  = count($name)  ? $name[0]  : null;
+        $email = count($email) ? $email[0] : null;
+
+        return compact('name', 'email');
     }
 
     protected function copyFixtures()

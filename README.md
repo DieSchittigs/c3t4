@@ -3,6 +3,8 @@
 This is a command line application that helps you automatically convert your Contao 3-compatible modules to Symfony-based Contao 4 bundles.
 
 ### Installation and Usage
+This application is based on [Laravel Zero](http://laravel-zero.com/). As such it requires **PHP 7.1**.
+
 The recommended way of installing this application is via Composer.
 ```sh
 $ composer global require dieschittigs/c3t4
