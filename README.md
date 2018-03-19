@@ -1,38 +1,26 @@
-<p align="center">
-    <img title="Laravel Zero" height="100" src="https://raw.githubusercontent.com/laravel-zero/docs/master/images/logo/laravel-zero-readme.png" />
-</p>
+# C3t4&ensp;&ndash;&ensp;Contao 3 to 4
 
-<p align="center">
-  <a href="https://travis-ci.org/laravel-zero/framework"><img src="https://img.shields.io/travis/laravel-zero/framework/stable.svg" alt="Build Status"></img></a>
-  <a href="https://scrutinizer-ci.com/g/laravel-zero/framework"><img src="https://img.shields.io/scrutinizer/g/laravel-zero/framework.svg" alt="Quality Score"></img></a>
-  <a href="https://scrutinizer-ci.com/g/laravel-zero/framework"><img src="https://img.shields.io/scrutinizer/coverage/g/laravel-zero/framework.svg" alt="Coverage"></img></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/d/total.svg" alt="Total Downloads"></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/v/stable.svg" alt="Latest Stable Version"></a>
-  <a href="https://packagist.org/packages/laravel-zero/framework"><img src="https://poser.pugx.org/laravel-zero/framework/license.svg" alt="License"></a>
-</p>
+This is a command line application that helps you automatically convert your Contao 3-compatible modules to Symfony-based Contao 4 bundles.
 
-<h4> <center>This is a <bold>community project</bold> and not an official Laravel one </center></h4>
+### Installation and Usage
+The recommended way of installing this application is via Composer.
+```sh
+$ composer global require dieschittigs/c3t4
+```
 
-Laravel Zero was created by, and is maintained by [Nuno Maduro](https://github.com/nunomaduro), and is a micro-framework that provides an elegant starting point for your console application. It is an **unofficial** and customized version of Laravel optimized for building command-line applications.
+Then, simply run `c3t4` in your Contao 3 instance and follow the on-screen instructions.
 
-- Built on top of the [Laravel](https://laravel.com) components.
-- Optional installation of Laravel [Eloquent](http://laravel-zero.com/#/?id=database), Laravel [Logging](http://laravel-zero.com/#/?id=log) and many others.
-- Supports interactive [menus](http://laravel-zero.com/#/?id=interactive-menus) and [desktop notifications](http://laravel-zero.com/#/?id=desktop-notifications) on Linux, Windows & MacOS.
-- Ships with a [Scheduler](http://laravel-zero.com/#/?id=scheduler) and a [Standalone Compiler](http://laravel-zero.com/#/?id=build-a-standalone-application).
-- Integration with [Collision](https://github.com/nunomaduro/collision) - Beautiful error reporting
+### Other steps for migrating from Contao 3 to 4
+In our experience, the following steps are sufficient to migrate an application from Contao 3 to 4:
+1. Export your Contao 3 database
+2. Import the database into your new Contao 4 database
+3. Install Contao 4 on your target system using the Contao Manager
+4. Run the install tool and update the database to Contao 4  
+  _(make sure none of the `DROP COLUMN` or `DROP TABLE` fields are selected)_
+5. Copy the content of your `templates` directory from Contao 3 to Contao 4
+6. Copy the content of your `files` directory from Contao 3 to Contao 4
+7. Upload your converted Contao 4 bundles
+8. Add your local Contao 4 bundles to your `composer.json` (in the `repositories` and `require` fields)
+9. Run `composer update`, or update your dependencies from the Contao Manager
 
-------
-
-## Documentation
-
-For full documentation, visit [laravel-zero.com](http://laravel-zero.com/).
-
-## Support the development
-**Do you like this project? Support it by donating**
-
-- PayPal: [Donate](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=66BYDWAT92N6L)
-- Patreon: [Donate](https://www.patreon.com/nunomaduro)
-
-## License
-
-Laravel Zero is an open-source software licensed under the [MIT license](https://github.com/laravel-zero/laravel-zero/blob/stable/LICENSE.md).
+Expectedly, Contao 4 is not fully backwards-compatible with Contao 3. For us, this was most apparent in some template rendering changes. This tool can't fix those changes for you, so you will obviously need to make sure that everything still works in your Contao 4 installation and make some minor adjustments where needed.
