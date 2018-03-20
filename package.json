@@ -7,24 +7,20 @@
   "author": "Christopher Mühl <christopher@dieschittigs.de>",
   "license": "MIT",
   "private": false,
-  "scripts": {
-    "prepublish": "babel src -d lib"
-  },
   "bin": {
     "c3t4": "lib/c3t4.js"
   },
   "dependencies": {
     "bluebird": "^3.5.1",
     "chalk": "^2.3.2",
+    "fs-extra": "^5.0.0",
     "glob": "^7.1.2",
     "inquirer": "^5.1.0",
-    "lodash": "^4.17.5"
+    "klaw": "^2.1.1",
+    "lodash": "^4.17.5",
+    "through2": "^2.0.3"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.19.0",
     "eslint-config-standard": "^11.0.0",
     "eslint-plugin-import": "^2.9.0",
