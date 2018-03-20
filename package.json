@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Converts Contao 3.5 Modules to Contao 4.4 Bundles",
   "main": "index.js",
-  "repository": "git@github.com:padarom/c3t4.git",
+  "repository": "git@github.com:dieschittigs/c3t4.git",
   "author": "Christopher Mühl <christopher@dieschittigs.de>",
   "license": "ISC",
   "private": false,
@@ -17,7 +17,6 @@
     "glob": "^7.1.2",
     "inquirer": "^5.1.0",
     "klaw": "^2.1.1",
-    "lodash": "^4.17.5",
     "through2": "^2.0.3"
   },
   "devDependencies": {
