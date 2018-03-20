@@ -11,6 +11,9 @@ $ npm install --global @dieschittigs/c3t4
 
 Then, simply run `c3t4` in your Contao 3 instance and follow the on-screen instructions.
 
+### Roadmap
+- Rename any occurences of `system/modules/.../assets` with `bundles/...` in order for bundle assets to be adjusted automatically
+
 ### Other steps for migrating from Contao 3 to 4
 In our experience, the following steps are sufficient to migrate an application from Contao 3 to 4:
 1. Export your Contao 3 database
