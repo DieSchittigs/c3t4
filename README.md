@@ -24,7 +24,21 @@ In our experience, the following steps are sufficient to migrate an application 
 5. Copy the content of your `templates` directory from Contao 3 to Contao 4
 6. Copy the content of your `files` directory from Contao 3 to Contao 4
 7. Upload your converted Contao 4 bundles
-8. Add your local Contao 4 bundles to your `composer.json` (in the `repositories` and `require` fields)
+8. Add your local Contao 4 bundles to your `composer.json` (in the `repositories` and `require` fields, see below)
 9. Run `composer update`, or update your dependencies from the Contao Manager
 
 Expectedly, Contao 4 is not fully backwards-compatible with Contao 3. For us, this was most apparent in some template rendering changes. This tool can't fix those changes for you, so you will obviously need to make sure that everything still works in your Contao 4 installation and make some minor adjustments where needed.
+
+##### Example `composer.json` entries
+```json
+{
+    ...
+    "require": {
+        ...
+        "mynamespace/mybundle": "@dev"
+    },
+    "repositories": [
+        { "type": "path", "url": "./bundles/mybundle" }
+    ]
+}
+```
