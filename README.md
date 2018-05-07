@@ -3,6 +3,8 @@
 This is a command line application that helps you automatically convert your Contao 3-compatible modules to Symfony-based Contao 4 bundles.
 
 ### Installation and Usage
+**C3t4 requires node.js 7.6 or newer.**
+
 The recommended way of installing this application is via Yarn or npm.
 ```sh
 $ yarn global add @dieschittigs/c3t4
