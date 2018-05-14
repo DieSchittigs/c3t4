@@ -1,6 +1,6 @@
 {
   "name": "@dieschittigs/c3t4",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "Converts Contao 3.5 Modules to Contao 4.4 Bundles",
   "repository": "git@github.com:dieschittigs/c3t4.git",
   "author": "Christopher Mühl <christopher@dieschittigs.de>",
